@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+.hojasBG-1{
+    background-image: url(img/hojas-fondo-1.png); /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: repeat;
+    background-size: contain;
+    border: 5px solid black;
+    height: 100vh;
+    border: 0px;
+
+}
+
+.background{
+    border: none;
+}
