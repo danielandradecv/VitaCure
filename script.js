@@ -22,8 +22,8 @@ function updateTransform() {
 // Efecto de zoom al hacer scroll con desvanecimiento
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  zoomLevel = 1 + scrollPosition / 500;
-  opacity = 1 - scrollPosition / 500; // Actualiza la opacidad
+  zoomLevel = 1 + scrollPosition / 800;
+  opacity = 1 - scrollPosition / 800; // Actualiza la opacidad
   updateTransform();
 });
 
@@ -33,3 +33,16 @@ document.addEventListener('mousemove', (event) => {
   mouseY = (event.clientY / window.innerHeight) - 0.5;
   updateTransform();
 });
+
+//loop
+
+let positionX = 0;
+const speed = 0.5; // Ajusta la velocidad del movimiento
+
+function loopAnimation() {
+    positionX += speed; // Incrementa la posición X
+    naranja.style.backgroundPositionY = `${positionX}px`; // Cambia la posición de fondo
+    requestAnimationFrame(loopAnimation); // Llama de nuevo para hacer el loop
+}
+
+loopAnimation(); // Inicia la animación
