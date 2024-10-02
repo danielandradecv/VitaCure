@@ -1,5 +1,6 @@
 const hojasBG = document.querySelector('.hojasBG-1');
 const naranja = document.querySelector('.naranjas');
+const detalles = document.querySelector('.detalle img');
 
 let zoomLevel = 1;
 let mouseX = 0;
@@ -13,6 +14,9 @@ function updateTransform() {
 
   naranja.style.transform = `translate(${mouseX * 50}px, ${mouseY * 50}px) scale(${zoomLevel})`;
   naranja.style.opacity = opacity;
+
+  detalles.style.transform = `translate(${mouseX * 15}px, ${mouseY * -9}px) scale(${zoomLevel})`;
+  detalles.style.opacity = opacity;
 }
 
 // Efecto de zoom al hacer scroll con desvanecimiento
