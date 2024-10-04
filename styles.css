@@ -6,10 +6,65 @@
     to { opacity: 0; }
 }
 
+
+/* 
+-----------------------------preload de la pag ----------- */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0; 
+    }
+    
+}
+
+.preLoader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    overflow: hidden;
+    
+}
+
+.orange {
+    position: absolute;
+    top: -100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear forwards;
+    border: none;
+
+}
+
+.orange1 {
+    background-image: url(img/Capa\ 2.png);
+}
+
+.orange2 {
+    background-image: url(img/Capa\ 4.png);
+}
+
+.orange3 {
+    background-image: url(img/Capa\ 5\ copia\ 3.png);
+}
+
+
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+
+/*-----------------------------fin de preload de la pag ----------- */
+
+
 body {
     background-color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     margin: 0;
+    position: relative;
 }
 
 h1 {
@@ -20,7 +75,7 @@ h1 {
 
 .banner-1 {
     
-    background-image: linear-gradient(25deg, #8f1913, #ab3815, #c75415, #e46f14);
+    background-image: linear-gradient(25deg, #ffaf03, #ff7300, #c75415, #ff2600);
     position: relative;
     overflow: hidden;
     height: 280px;
@@ -135,11 +190,12 @@ h1 {
 }
 
 
+
 /* ------------------------------ final banner 1 --------------------------------- */
-.banner-2 {
-    height: 280px;
+/* .banner-2 {
+    height: 1000px;
 }
 
 .banner-3 {
     height: 280px;
-}
+} */
