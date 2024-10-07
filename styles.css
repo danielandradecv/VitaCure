@@ -67,7 +67,7 @@ body {
     position: relative;
 }
 
-h1 {
+.tituloP {
     color: white;
     text-align: center;
     margin-bottom: 300px;
@@ -186,16 +186,201 @@ h1 {
     width: 120%;
     z-index: 5;
     
+    
+}
+
+
+
+/* ------------------------------ final banner 1 inicio banner 2 --------------------------------- */
+
+@keyframes fallA {
+    100% {
+		transform: translateY(0);
+	}
+   
+    
+}
+@keyframes fall-bottom {
+    
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes idle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Pequeño movimiento hacia arriba y abajo */
+    }
+}
+
+.banner-2 {
+    background-image: linear-gradient(2deg, #ff8800, #00ffaa);
+    margin-top: 280px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+.burbujas svg {
+    position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+
+.svg{
+    opacity: 0;
+
+}
+
+.svg.start{
+    animation: llenarBurbujas 17s forwards;
+
+}
+
+
+.burbuja-bottom-layer {
+    will-change: transform;
+    transform: translateY(768px);
+    animation: fallA 5.5s infinite linear;
+    
+    
+}    
+
+
+.burbuja-top-layer {
+    transform: translateY(768px);
+    will-change: transform;
+    animation: fallA 3s infinite linear;
+    
+}
+
+@keyframes llenarBurbujas {
+    0% {
+        opacity: 0; /* Comienza lleno (opaco) */
+    }
+    100% {
+        opacity: 1; /* Se vuelve completamente transparente */
+    }
+}
+
+
+
+
+.burbujas{
+    /* border: solid 1px black; */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    height: 280px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.texto{
+    /* border: solid 1px black; */
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    font-size: 28px;
+    
+    }
+
+
+
+.cont {
+
+
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+}
+.vaso{
+    background-image: url(imgBanner2/vaso.png);
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+ 
+}
+
+.vaso.fuel{
+    
+    opacity: 1; /* Comienza visible */
+    animation: llenarVaso 3s forwards;
+
+}
+
+
+.vasoNaranja {
+    background-image: url(imgBanner2/vaso-naranja-.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/* Animación para reducir opacidad */
+@keyframes llenarVaso {
+    0% {
+        opacity: 1; /* Comienza lleno (opaco) */
+    }
+    100% {
+        opacity: 0; /* Se vuelve completamente transparente */
+    }
+}
+
+
+.pastilla img {
+    position: absolute;
+    width: 200px;
+    top: -250px; /* Empieza fuera de la pantalla */
+    left: 5px;
+    transition: all 0.5s ease;
+    opacity: 0%; /* Transición para que vuelva suavemente */
+    left: 5px;
+
+}
+
+.pastilla img.fall {
+    animation: idle 1.5s infinite ease-in-out;
+    top: -30px;
+    opacity: 100%;
 
 }
 
 
 
-/* ------------------------------ final banner 1 --------------------------------- */
-/* .banner-2 {
-    height: 1000px;
-}
+.efervecancia {
+    position: absolute;
+    width: 50px;
+    
+}  
+
+/* ------------------------------ final banner 2 inicio banner 3 --------------------------------- */
+
 
 .banner-3 {
+    margin-top: 280px;
+    background-image: linear-gradient(25deg, #071854, #1e5282, #2391b2, #04d5e4);
     height: 280px;
-} */
+    margin-bottom: 280px;
+} 
