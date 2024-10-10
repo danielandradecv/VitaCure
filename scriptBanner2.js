@@ -5,6 +5,7 @@ document.addEventListener('scroll', function() {
     const burbujas = document.querySelector('.svg');
     const efervescencia = document.querySelector('.efervescencia'); 
     const efectTitle = document.querySelector('.texto'); 
+    
 
 
     const bannerPosition = banner.getBoundingClientRect().top;
@@ -19,7 +20,7 @@ document.addEventListener('scroll', function() {
         efervescencia.classList.add('start');
         efectTitle.classList.add('start');
         efectTitle.classList.add('animate__animated', 'animate__bounce');
-
+        
 
 
 
